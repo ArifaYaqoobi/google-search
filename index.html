@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Search</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f8f9fa; /* Light gray background */
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            .search-container {
+                display: inline-block;
+                margin-top: 20vh;
+            }
+
+            .search-box {
+                width: 500px;
+                height: 45px;
+                border: 1px solid #dcdcdc;
+                border-radius: 24px;
+                padding: 0 20px;
+                font-size: 18px;
+                outline: none;
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+            }
+
+            .search-btn,
+            .lucky-btn {
+                margin-top: 15px;
+                width: 160px;
+                height: 40px;
+                font-size: 16px;
+                border: none;
+                border-radius: 10px;
+                background-color: #4285F4; /* Google's blue color */
+                color: white;
+                cursor: pointer;
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+            }
+
+            .search-btn:hover,
+            .lucky-btn:hover {
+                background-color: #3367D6; /* Slightly darker blue */
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .links {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            .links a {
+                margin-left: 20px;
+                text-decoration: none;
+                font-size: 14px;
+                color: #4285F4;
+                transition: color 0.2s;
+            }
+
+            .links a:hover {
+                color: #3367D6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="links">
+            <a href="image.html">Image Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </div>
+
+        <div class="search-container">
+            <form action="https://google.com/search" method="get">
+                <input class="search-box" type="text" name="q" placeholder="Search Google">
+                <div>
+                    <input class="search-btn" type="submit" value="Google Search">
+                    <button class="lucky-btn" type="button" onclick="feelingLucky()">I’m Feeling Lucky</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function feelingLucky() {
+                const query = document.querySelector('.search-box').value;
+                if (query) {
+                    window.location.href = `https://google.com/search?btnI=I&q=${encodeURIComponent(query)}`;
+                }
+            }
+        </script>
+    </body>
+    </html>

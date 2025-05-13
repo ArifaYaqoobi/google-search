@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            text-align: left;
+            margin: 30;
+            padding: 30;
+
+        }
+
+        .container {
+            margin-top: 10vh;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #202124; /* Google's dark text color */
+            margin-bottom: 30px;
+
+
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            margin-left: 20px;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+        }
+
+        label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input {
+            width: 300px;
+            height: 40px;
+            border: 1px solid #dcdcdc;
+            border-radius: 0px;
+            padding: 0 10px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus {
+            border: 1px solid #4285F4; /* Google's blue color on focus */
+            box-shadow: 0px 2px 4px rgba(66, 133, 244, 0.3);
+        }
+
+        .search-btn {
+            width: 160px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 0px; /* Rounded corners for button */
+            background-color: #4285F4;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-btn:hover {
+            background-color: #3367D6;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .links a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #4285F4; /* Google's link color */
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: #3367D6;
+        }
+    </style>
+</head>
+<body>
+    <div class="links">
+        <a href="index.html">Back to Google Search</a>
+    </div>
+
+    <div class="container">
+        <h1>Google Advanced Search</h1>
+        <form action="https://google.com/search" method="get">
+            <div class="form-group">
+                <label for="all-words">All these words:</label>
+                <input type="text" id="all-words" name="as_q" placeholder="e.g. Climate Change">
+            </div>
+            <div class="form-group">
+                <label for="exact-phrase">Exact phrase:</label>
+                <input type="text" id="exact-phrase" name="as_epq" placeholder="e.g. Renewable Energy">
+            </div>
+            <div class="form-group">
+                <label for="any-words">Any of these words:</label>
+                <input type="text" id="any-words" name="as_oq" placeholder="e.g. Solar OR Wind">
+            </div>
+            <div class="form-group">
+                <label for="none-words">None of these words:</label>
+                <input type="text" id="none-words" name="as_eq" placeholder="e.g. Fossil">
+            </div>
+            <div class="form-group">
+                <label for="site">Site or domain:</label>
+                <input type="text" id="site" name="as_sitesearch" placeholder="e.g. example.com">
+            </div>
+            <input class="search-btn" type="submit" value="Advanced Search">
+        </form>
+    </div>
+</body>
+</html>
